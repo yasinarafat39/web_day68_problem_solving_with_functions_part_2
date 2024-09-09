@@ -54,7 +54,8 @@ console.log(result); // ron
  *      tablet = 15000 tk
  *      mobile = 20000 tk
  *
- * Write a JavaScript function named calculateElectronicsBudget that takes in the number of laptop, tablets, and mobile and returns the total money required.
+ * Write a JavaScript function named calculateElectronicsBudget that takes in
+   the number of laptop, tablets, and mobile and returns the total money required.
  */
 
 function calculateElectronicsBudget(laptopBugdget, tabletBudget, mobileBudget) {
@@ -74,8 +75,10 @@ console.log(result); // 70000
 
 ```javascript
 /**
- * You are given an array of phone objects, each containing information about the model, brand, and price. Your task is to write a JavaScript function named findAveragePhonePrice that takes this array as input and returns the average price of phone.
- */
+ * You are given an array of phone objects, each containing information about
+   the model, brand, and price. Your task is to write a JavaScript function named
+   findAveragePhonePrice that takes this array as input and returns the average price of phone.
+*/
 
 function getAveragePrice(phones) {
   let totalPhonePrice = 0;
@@ -104,5 +107,32 @@ console.log(result); // 58166.666666666664
 ## Task - 5
 
 ```javascript
+
+/**
+ * For each employee their current salary is calculated by multiplying yearly increment with
+   experience then adding the result to the starting salary. Now calculate is the total salary
+   has to be provided by the company in a month.
+*/
+
+function calculatePerMonthTotalSalaryCost(employees) {
+  let perMonthTotalSalaryCost = 0;
+  for (let employee of employees) {
+    let totalIncrementSalary = employee.increment * employee.experience;
+    const currentSalary = employee.starting + totalIncrementSalary;
+    perMonthTotalSalaryCost += currentSalary;
+  }
+  return perMonthTotalSalaryCost;
+}
+
+const employees = [
+  { name: "shahin", experience: 5, starting: 20000, increment: 5000 },
+  { name: "shihab", experience: 3, starting: 15000, increment: 7000 },
+  { name: "shikot", experience: 9, starting: 30000, increment: 1000 },
+  { name: "shohel", experience: 0, starting: 29000, increment: 4000 },
+];
+
+const result = calculatePerMonthTotalSalaryCost(employees);
+console.log(result); // 149000
+
 
 ```
